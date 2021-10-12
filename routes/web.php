@@ -14,3 +14,21 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/hello', function () {
+    echo "Hello World";
+});
+
+Route::get('/name/{AlMaarip}', function ($AlMaarip) {
+    return "Hello " . $AlMaarip;
+});
+
+Route::get('/names/{Al}', function ($Al) {
+    return "Hello " . $Al;
+})->where('Al', '[A-Za-z]+');
+
+Route::get('/name/{name}/{nrp}', function  ($name, $nrp) {
+    return  $name. " Al Maarip " . $nrp. " 190914018"; 
+});
+
+
