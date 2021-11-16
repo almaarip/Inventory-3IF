@@ -31,4 +31,6 @@ Route::get('/name/{name}/{nrp}', function  ($name, $nrp) {
     return  $name. " Al Maarip " . $nrp. " 190914018"; 
 });
 
+Route::get('my-academic/{course}/{task}/{quiz}/{mid_term}/{final}','StudentController@myCourse');
+
 
